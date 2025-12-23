@@ -1,0 +1,17 @@
+# Cargo.toml
+[package]
+name = "pingora_reverse_proxy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tikv-client = "0.3"
+pingora = "0.6"
+pingora-proxy = "0.6"
+pingora-http = "0.6"
+async-trait = "0.1"
+pingora-core = "0.6.0"
+
+[profile.release]
+lto = true
+codegen-units = 1
